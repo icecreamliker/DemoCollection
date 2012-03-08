@@ -1,37 +1,43 @@
 /*
- * yaoli<yaoli111144@gmail.com>
- * 2012-3-8
- * factory method pattern
+ * author: yaoli<yaoli111144@gmail.com>
+ * time: 2012-3-8
+ * description: factory method pattern
  */
  
-var Factory = function(){};
-Factory.prototype = {
-	constructor: Factory,
+var Animal = function(){};
+Animal.prototype = {
+	constructor: Animal,
 	Dog : function(){
 		alert('dog is crying');
 	},
 	Cat : function(){
 		alert('cat is crying');
 	},
-	Animal : function(){
-		alert('default animal is crying');
+	Beast : function(){
+		alert('wow, I am the beast,i wanna eat you!');
 	} 
 }
- function PregnantCreator(type){
+
+/**
+ * @param {String} identify animal type
+ * @return {Object} return the created animal object 
+ * @description animal creator.if you don't know, i wanna fuck ur ass
+ */
+function PregnantCreator(type){
 	var innerObj;
 	switch(type){
 		case 'dog':
-			innerObj = new Factory().Dog;
+			innerObj = new Animal().Dog;
 			break;
 		case 'cat':
-			innerObj = new Factory().Cat;
+			innerObj = new Animal().Cat;
 			break;
 		default:
-			innerObj = new Factory().Animal;
+			innerObj = new Animal().Beast;
 	}
 	return innerObj;
- }
+}
  
- //test
- //var newObj = PregnantCreator('dog');
- //newObj();
+//test
+//var newObj = PregnantCreator('dog');
+//newObj();
