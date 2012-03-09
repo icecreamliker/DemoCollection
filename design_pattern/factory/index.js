@@ -37,7 +37,7 @@ function PregnantCreator(type){
 	}
 	return innerObj;
 }
- 
+
 //test
 //var newObj = PregnantCreator('dog');
 //newObj();
