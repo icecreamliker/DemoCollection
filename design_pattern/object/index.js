@@ -78,14 +78,14 @@ Kid.prototype.age = 21;
 Kid.gender = 'male';
 
 
-/*
+
 
 /********************************************
  * For BAT
  * Author: LeeY<yaoli111144@gmail.com>
  * Update: 2012-12-4
  *********************************************/
-
+/*
 // Impl
 $(function () {
 	!function(){
